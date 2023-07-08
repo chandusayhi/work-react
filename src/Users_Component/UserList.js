@@ -8,7 +8,8 @@ let UserList = () =>{
     let dispatch = useDispatch();
 
     let CLickUserList = ()=> {
-        dispatch(UserListAction.fetchUsers())
+       /* dispatch(UserListAction.fetchUsers())*/
+        dispatch(UserListAction.fetchUsersList());
     };
 
     let userInfo  = useSelector((state) => {
@@ -25,7 +26,7 @@ let UserList = () =>{
                             <p className="h3 text-success">User List</p>
                             <p className="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste, quas!</p>
                             <button onClick={CLickUserList} className="btn btn-success btn-sm">Get Users</button>
-                            <pre>{JSON.stringify(users)}</pre>
+
 
                         </div>
                     </div>
